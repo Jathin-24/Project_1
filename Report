@@ -1,0 +1,270 @@
+Project Title:
+﻿Predicting Customer Insurance Purchases Using Classification Algorithms
+
+Your Name: Jathin Lalith. D
+
+Date: 29 June 2025
+
+Abstract:﻿
+
+The main aim of the project is to predict whether a new person with a certain age and salary is likely to purchase the insurance or not. There are many different types of classification algorithms—including Logistic Regression, K-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Trees, and Random Forests—are implemented to develop predictive models. The project involved preprocessing the data, training each model, and checking their performance using metrics such as accuracy, precision, recall, and F1-score. Through comparision of algorithms, the project aims to determine which algorithm yields the highest predictive accuracy. The results provide insights into which machine learning technique is most suitable for predicting insurance purchasing behavior in this context.
+
+Table of Contents:
+
+Introduction
+Literature Review
+Problem Statement
+Data Collection and Preprocessing
+Methodology
+Implementation
+Results
+Discussion
+Conclusion
+References
+Appendices
+Acknowledgments
+1. Introduction
+
+The project is about predicting whether customers will buy the health insurance based on age and estimated salary. The performance of the model build is very important as it helps in improving marketing strategies and decision making.
+
+The problem told in this project is how to classify new customers effectively using limited input features and also have to maintain the high accuracy and best performance. The main goal of this project is to build and compare different types of models build and select the best and most suitable one for the predection.
+
+To do this tasks i used various machine learning models that were mentioned in the problem and they are Logistic Regression, K-Nearest Neighbors (KNN), Support Vector Machines (SVM), Decision Trees, and Random Forest Classifiers and i also preprocessed the data using numpy and pandas.
+
+2. Literature Review
+
+Many studies have examined how to predict whether customers will purchase insurance by applying statistical and machine learning techniques. These studies show that classification methods—especially models like Random Forests—are effective for this purpose. However, to achieve good predictive performance without overfitting, it is essential to select the right features, carefully tuning model parameters, and ensure the model performs well to new data given.
+
+3. Problem Statement
+
+The problem in this project is to predict if a customer will buy insurance based on age and estimated salary it means that we have to build a model that can tell weather the customer will buy the insurance or not based on the data.
+
+Assumptions:
+
+The data give is accurate and was taken from real customers
+There are no missing values in the dataset
+Age and salary are the main things that are influencing on the purchase of the insurance
+Limitations:
+
+The model does not include other factors that might influence the purchase of the insurance
+Limited no of features are given which might pose some predictions after the running of the model and even if we get 90% accuracy due to this there may be some wrong predictions.
+4. Data Collection and Preprocessing
+
+The data that was used in this project is obtained from the Bank Insurance Company from the following link
+
+https://drive.google.com/file/d/1wOrVrq30W3bl1st4cvnt5bvn5UWEK4Ab/view?usp=drive_link
+
+It had 3 fields
+
+age
+Estimated Salary
+Purchased
+Preprocessing Steps:
+
+Checked for Missing values and inconsistent data
+Handling missing values (if any)
+Split Training data and Testing data
+Applied Standardization on Age and Estimated Salary
+5. Methodology:
+
+Algorithms Used:
+
+Logistic Regression
+K-Nearest Neighbors
+Support Vector Machine
+Decision Tree
+Random Forest
+Rationale for Selection:
+
+These algorithms cover both linear and nonlinear classifiers.
+Evaluation Metrics:
+
+Accuracy
+Precision
+Recall
+F1-score
+Confusion Matrix
+6. Implementation
+
+Split the data into training and test sets
+I implemented the project using many libraries like:
+
+numpy
+pandas
+sklearn
+matplotlib
+etc
+7. Results
+
+Algorithm                     Accuracy (%)            Precision           Recall            F1-Score
+
+Logistic Regression              89                         0.89                  0.75                 0.81
+
+K-Nearest Neighbors           93                        0.88                  0.91                  0.89
+
+Support Vector Machine     90                        0.92                  0.75                  0.83
+
+Decision Tree                        91                         0.83                  0.91                   0.87
+
+Random Forest                     91                         0.85                  0.88                  0.86
+
+
+
+Baseline Accuracy:
+
+If 68 out of 100 samples are "no purchase," the baseline accuracy would be 68%.
+8. Discussion
+
+Insights from the results:
+
+KNN worked best (93% accuracy).
+Decision Tree and Random Forest also did very well (91% accuracy). They handled more complex patterns.
+Logistic Regression and SVM had high precision but had low recall.
+Unexpected outcomes:
+
+I didn’t expect KNN to beat all others.
+Logistic Regression was less accurate at finding actual buyers.
+Strengths of my approach:
+
+I tested multiple models and compared them.
+The results are easy to understand.
+All models did much better than just guessing the class.
+Limitations:
+
+I only used two features
+KNN might slow down with very large datasets.
+9. Conclusion:
+
+Key Findings:
+
+Among all models, KNN had the highest accuracy (93%), showing that similar customers often behave alike.
+Decision Tree and Random Forest also performed strongly (91%)
+
+
+Using these models can help the company target marketing efforts, improve sales, and make better decisions.
+
+
+
+Future improvements:
+
+Add more features like past purchase history, health status, or family details to improve predictions.
+Use cross-validation to confirm results are stable across different data splits.
+Try other algorithms like Neural Networks for even better performance on larger datasets.
+10. References:
+
+scikit-learn documentation. Retrieved from https://scikit-learn.org/stable/documentation.html
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+
+
+11. Appendices:
+
+Technical Details
+
+Environment:
+
+Python 3.x
+scikit-learn
+NumPy
+pandas
+matplotlib / seaborn for visualization
+Data Preprocessing:
+
+StandardScaler was used to normalize age and salary.
+Missing salary values imputed using median.
+Sample code:
+
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+
+X_scaled = scaler.fit_transform(X)
+
+To reproduce results:
+
+Install required packages:
+
+pip install scikit-learn pandas matplotlib
+Clone the repository:
+
+git clone https://github.com/Jathin-24/Project_1
+cd Project_1
+Run the main script:
+
+python main.py
+
+
+Questions:
+
+1. Graphical Analysis and Predictions:(K-NN)
+
+Age 30, Salary 87,000            not purchases
+
+Age 40, No Salary                   not purchases
+
+Age 40, Salary 100,000          purchases
+
+Age 50, No Salary                    purchases
+
+2. Graphical Analysis and Predictions:(K-NN)
+
+
+Age 18, No Salary                    not purchases
+
+Age 22, Salary 600,000          purchases
+
+Age 35, Salary 2,500,000       purchases
+
+Age 60, Salary 100,000,000   purchases
+
+3. Hypotheses and Assumptions:
+
+Hypothesis 1:
+
+Younger individuals with higher salaries are more likely to purchase health insurance.
+
+Test:
+
+I used the KNN model to simulate predictions for ages under 30 and salaries above ₹500,000.
+
+Result:
+
+The model predicted a high probability of purchase.
+
+
+
+Hypothesis 2:
+
+Older individuals with higher salaries might be less inclined to purchase health insurance.
+
+Test:
+
+Input ages over 50 with very high salaries (₹1,000,000+).
+
+Result:
+
+Predicted probabilities were lower (about 60–70%).
+
+
+
+Hypothesis 3:
+
+Salary has a stronger impact on purchasing than age.
+
+Test:
+
+Kept age constant (35 years) and varied salary from ₹100,000 to ₹2,500,000.
+
+Result:
+
+Probability of purchase increased significantly as salary increased, confirming salary’s stronger influence.
+
+4. Lessons Learned and Real-life Applications:
+
+What I learned:
+
+Machine learning models can accurately predict customer behavior using just a few features.
+KNN worked surprisingly well, proving that even simple models are powerful when data is clean.
+Real-Life Application Scenarios:
+
+Case Study 1: Targeted Insurance Marketing
+Case Study 2: Credit Card Upselling
